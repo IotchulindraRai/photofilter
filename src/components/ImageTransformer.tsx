@@ -154,25 +154,37 @@ const ImageTransformer: React.FC = () => {
         </motion.button>
 
         {currentImage.filteredImage && (
-          <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={handlePayment}
-            disabled={isPaying}
-            className="py-3 px-6 rounded-lg flex items-center justify-center font-medium bg-green-600 hover:bg-green-700 text-white"
-          >
-            {isPaying ? (
-              <>
-                <Loader2 className="h-5 w-5 animate-spin mr-2" />
-                Processing Payment...
-              </>
-            ) : (
-              <>
-                <CreditCard className="h-5 w-5 mr-2" />
-                Pay NPR 5 to Download
-              </>
-            )}
-          </motion.button>
+          <>
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleDownload}
+              className="py-3 px-6 rounded-lg flex items-center justify-center font-medium bg-green-600 hover:bg-green-700 text-white"
+            >
+              <Download className="h-5 w-5 mr-2" />
+              Download Image
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handlePayment}
+              disabled={isPaying}
+              className="py-3 px-6 rounded-lg flex items-center justify-center font-medium bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              {isPaying ? (
+                <>
+                  <Loader2 className="h-5 w-5 animate-spin mr-2" />
+                  Processing Payment...
+                </>
+              ) : (
+                <>
+                  <CreditCard className="h-5 w-5 mr-2" />
+                  Pay NPR 5 to Download HD
+                </>
+              )}
+            </motion.button>
+          </>
         )}
       </div>
     </motion.div>

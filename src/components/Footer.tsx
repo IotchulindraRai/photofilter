@@ -16,31 +16,36 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} PhotoFilter Pro
             </p>
-            <p className="text-gray-500 text-xs mt-1">
-              Transform your photos with stunning filters and effects
+            <p className="text-gray-500 text-xs mt-1 flex items-center">
+              Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> by{' '}
+              <a 
+                href="https://github.com/IotchulindraRai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-purple-400 hover:text-purple-300 ml-1"
+              >
+                Chulindra Rai
+              </a>
             </p>
           </div>
           
           <div className="flex items-center space-x-4">
             <a 
-              href="#" 
+              href="https://github.com/IotchulindraRai" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-400 transition-colors"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="#" 
+              href="https://twitter.com" 
               className="text-gray-400 hover:text-purple-400 transition-colors"
               aria-label="Twitter"
             >
               <Twitter className="h-5 w-5" />
             </a>
-            <div className="text-gray-400 flex items-center text-sm">
-              <span className="mr-1">Made with</span>
-              <Heart className="h-4 w-4 text-pink-500 mx-1" />
-              <span>in 2025</span>
-            </div>
           </div>
         </div>
       </div>
